@@ -1,10 +1,18 @@
-# QR Code Generator dengan PHP
+# QR Code Generator Dinamis dengan PHP
 
-Proyek ini menunjukkan cara membuat QR code di PHP menggunakan API eksternal tanpa perlu library tambahan.
+Proyek ini adalah versi dinamis dari QR code generator yang memungkinkan user memasukkan teks sendiri dan memilih jenis barcode/QR code melalui form HTML.
 
-## Cara Kerja
+## Fitur
 
-Menggunakan API dari `bwipjs-api.metafloor.com` untuk generate QR code secara online.
+- Input teks custom melalui form
+- Pilihan jenis kode: QR Code, Barcode 128, EAN-13
+- Pilihan ukuran: Kecil, Sedang, Besar
+- Interface yang user-friendly
+
+## Struktur File
+
+- `index.php` - Form HTML untuk input data
+- `qrProses.php` - Script PHP untuk memproses form dan generate QR code
 
 ## Parameter API
 
@@ -47,11 +55,18 @@ Cukup ganti nilai `bcid=` sesuai jenis yang diinginkan.
    ```bash
    cd qr-generator
    ```
-3. Jalankan PHP built-in server:
+3. Checkout ke branch dinamis:
+   ```bash
+   git checkout dinamis
+   ```
+4. Jalankan PHP built-in server:
    ```bash
    php -S localhost:8000
    ```
-4. Buka browser dan akses `http://localhost:8000`
-5. QR code akan muncul di browser
-6. Scan dengan aplikasi QR scanner
+5. Buka browser dan akses `http://localhost:8000`
+6. Isi form dengan teks yang diinginkan
+7. Pilih jenis kode dan ukuran
+8. Klik "Generate QR Code"
+9. QR code akan muncul di halaman hasil
+10. Scan dengan aplikasi QR scanner
 
